@@ -1,0 +1,29 @@
+package org.dimigo.oop;
+
+import com.sun.source.util.SourcePositions;
+
+public class TypeCasting {
+    public static void main(String[] args){
+        //자동형변환 : 작은타입 -> 큰타입(promotion)
+    byte b = 10;
+    short s = b;
+    int i = s ;
+    long l = i;
+    System.out.printf("%d %d %d %d\n",b,s,i,l);
+
+    //강제 형변환 : 큰타입 -> 작은타입(Casting)
+    i = (int)1;
+    s = (short)i;
+    b = (byte)s;
+    System.out.printf("%d %d %d %d\n",b,s,i,l);
+
+            //값의 범위를 고려헤서 Casting하기
+        int i2= 128;
+        byte b2 = (byte)i2;
+        System.out.println(b2);
+
+        long l2= 100000000L;
+        int i3 = (int)l2;
+        System.out.printf("%d ",i3);
+    }
+}
